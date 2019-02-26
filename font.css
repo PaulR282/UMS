@@ -3,7 +3,6 @@ body {
 	font-family: Arial;
 	color: white;
 	font-size: 20px;
-	margin-left: 33.3%;
 
 }
 ul {
@@ -56,17 +55,15 @@ div.input {
 .button:hover {
 	background-color: green;
 }
-#all {
-	
-}
 #laenge {
 	text-align: center;
 	position: fixed;
 	width: 600px;
 	height:200px;
 	top: 100px;
-	display: none;
-	background-color: grey; 
+	background-color: grey;
+	border: 3px solid;
+	color: green;
 } 
 #volumen {
 	text-align: center;
@@ -74,6 +71,11 @@ div.input {
 	width: 600px;
 	height:200px;
 	top: 100px;
-	display: none;
-	background-color: grey; 
+	background-color: grey;
+	border: 3px solid;
+	color: green;
 } 
+
+header {
+	margin-left: 29.56%;
+}

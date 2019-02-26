@@ -1,47 +1,47 @@
 <html>
 <link href="font.css" rel="stylesheet">
 <script type="text/javascript" src="script.js"></script>
-
 <head>
     <title>Homeserver</title>
 </head>
-<div id="all">
-
-    <body>
+<body id="all">
+    <header>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a>Mathe</a>
                 <ul>
-                    <li><input onclick="laenge_show()" type="button" class="button" value="L&auml;nge"></li>
-                    <li><input onclick="volumen_show()" type="button" class="button" value="Volumen"></li>
-                    <li><input onclick="masse_show()" type="button" class="button" value="Masse"></li>
-                    <li><input onclick="fleache_show()" type="button" class="button" value="Fl&auml;che"></li>
-                    <li><input onclick="Zeit_show()" type="button" class="button" value="Zeit"></li>
-                    <li><input onclick="Winkel_show()" type="button" class="button" value="Winkel"></li>
+                    <li><input onclick="display_toggle(laenge)" type="button" class="button" value="L&auml;nge"></li>
+                    <li><input onclick="display_toggle(volumen)" type="button" class="button" value="Volumen"></li>
+                    <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
+                    <li><input onclick="display_toggle(flaeche)" type="button" class="button" value="Fl&auml;che"></li>
+                    <li><input onclick="display_toggle(zeit)" type="button" class="button" value="Zeit"></li>
+                    <li><input onclick="display_toggle(winkel)" type="button" class="button" value="Winkel"></li>
                 </ul>
             </li>
             <li><a>Physik</a>
                 <ul>
-                    <li><input onclick="temperatur_show()" type="button" class="button" value="Temperatur"></li>
-                    <li><input onclick="speed_show()" type="button" class="button" value="Geschwindigkeit"></li>
-                    <li><input onclick="masse_show()" type="button" class="button" value="Masse"></li>
-                    <li><input onclick="gewicht_show()" type="button" class="button" value="Gewicht"></li>
-                    <li><input onclick="druck_show()" type="button" class="button" value="Druck"></li>
-                    <li><input onclick="kraft_show()" type="button" class="button" value="Kraft"></li>
-                    <li><input onclick="arbeit_show()" type="button" class="button" value="Arbeit"></li>
-                    <li><input onclick="leistung_show()" type="button" class="button" value="Leistung"></li>
+                    <li><input onclick="display_toggle(temperatur)" type="button" class="button" value="Temperatur"></li>
+                    <li><input onclick="display_toggle(speed)" type="button" class="button" value="Geschwindigkeit"></li>
+                    <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
+                    <li><input onclick="display_toggle(gewicht)" type="button" class="button" value="Gewicht"></li>
+                    <li><input onclick="display_toggle(druck)" type="button" class="button" value="Druck"></li>
+                    <li><input onclick="display_toggle(kraft)" type="button" class="button" value="Kraft"></li>
+                    <li><input onclick="display_toggle(arbeit)" type="button" class="button" value="Arbeit"></li>
+                    <li><input onclick="display_toggle(leistung)" type="button" class="button" value="Leistung"></li>
                 </ul>
             </li>
             <li><a>Anderweitiges</a>
                 <ul>
-                    <li><input type="button" class="button" value="placehold"></li>
+                    <li><input onclick="display_toggle()"type="button" class="button" value="placehold"></li>
                     <li><input type="button" class="button" value="placehold"></li>
                 </ul>
             </li>
         </ul>
+    </header>
+    <div>
         <div id="laenge" style="display: none"></div>
         <div id="volumen" style="display: none"></div>
-    </body>
+    </div>
+</body>
 </div>
-
 </html>
