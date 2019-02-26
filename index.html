@@ -1,6 +1,7 @@
 <html>
 <link href="font.css" rel="stylesheet">
 <script type="text/javascript" src="script.js"></script>
+
 <head>
     <title>Homeserver</title>
 </head>
@@ -9,22 +10,37 @@
     <body>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a>Files</a>
+            <li><a>Mathe</a>
                 <ul>
-                    <li><input onclick="chat_display()" type="button" class="button" value="Chat"></li>
-                    <li><input type="button" class="button" value="phpinfo_wip"></li>
+                    <li><input onclick="laenge_show()" type="button" class="button" value="L&auml;nge"></li>
+                    <li><input onclick="volumen_show()" type="button" class="button" value="Volumen"></li>
+                    <li><input onclick="masse_show()" type="button" class="button" value="Masse"></li>
+                    <li><input onclick="fleache_show()" type="button" class="button" value="Fl&auml;che"></li>
+                    <li><input onclick="Zeit_show()" type="button" class="button" value="Zeit"></li>
+                    <li><input onclick="Winkel_show()" type="button" class="button" value="Winkel"></li>
                 </ul>
             </li>
-            <li><a>Other</a>
+            <li><a>Physik</a>
                 <ul>
-                    <li><input type="button" class="button" value="heizung_wip"></li>
-                    <li><input type="button" class="button" value="temp_wip"></li>
+                    <li><input onclick="temperatur_show()" type="button" class="button" value="Temperatur"></li>
+                    <li><input onclick="speed_show()" type="button" class="button" value="Geschwindigkeit"></li>
+                    <li><input onclick="masse_show()" type="button" class="button" value="Masse"></li>
+                    <li><input onclick="gewicht_show()" type="button" class="button" value="Gewicht"></li>
+                    <li><input onclick="druck_show()" type="button" class="button" value="Druck"></li>
+                    <li><input onclick="kraft_show()" type="button" class="button" value="Kraft"></li>
+                    <li><input onclick="arbeit_show()" type="button" class="button" value="Arbeit"></li>
+                    <li><input onclick="leistung_show()" type="button" class="button" value="Leistung"></li>
+                </ul>
+            </li>
+            <li><a>Anderweitiges</a>
+                <ul>
+                    <li><input type="button" class="button" value="placehold"></li>
+                    <li><input type="button" class="button" value="placehold"></li>
                 </ul>
             </li>
         </ul>
-        <div id="chat" style="display: none">
-            <p><iframe src="chat.html"></iframe></p>
-        </div>
+        <div id="laenge" style="display: none"></div>
+        <div id="volumen" style="display: none"></div>
     </body>
 </div>
 

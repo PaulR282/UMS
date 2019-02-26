@@ -1,4 +1,4 @@
-function chat_display() {
+function leange_show() {
 	var x = document.getElementById("chat");
 	if (x.style.display === "none") {
 		x.style.display = "block";
