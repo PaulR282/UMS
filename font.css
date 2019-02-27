@@ -1,5 +1,5 @@
 body {
-	background: url('bg.jpg')no-repeat;
+	background-color: grey;
 	font-family: Arial;
 	color: white;
 	font-size: 20px;
@@ -8,7 +8,6 @@ body {
 ul {
 	padding: 0px;
 	list-style: none;
-
 }
 ul li {
 	float: left;
@@ -18,7 +17,6 @@ ul li {
 	opacity: .9;
 	line-height: 40px;
 	margin-right: 3px;
-
 }
 ul li a {
 	text-decoration: none;
@@ -28,10 +26,15 @@ ul li a {
 }
 ul li a:hover {
 	background-color: green;
+	color: white;
+	text-decoration: none;
+	transition: 0.35s;
 }
 ul li ul li {
 	margin: 0px;
 	display: none;
+
+	
 }
 ul li:hover ul li {
 	display: block;
@@ -56,26 +59,18 @@ div.input {
 	background-color: green;
 }
 #laenge {
-	text-align: center;
-	position: fixed;
-	width: 600px;
-	height:200px;
-	top: 100px;
-	background-color: grey;
-	border: 3px solid;
-	color: green;
-} 
-#volumen {
-	text-align: center;
-	position: fixed;
-	width: 600px;
-	height:200px;
-	top: 100px;
-	background-color: grey;
-	border: 3px solid;
-	color: green;
+ margin-top: 15px;
+ text-align: center;
+ margin-left: 15%;
+ margin-right: 15%;	
 } 
 
 header {
-	margin-left: 29.56%;
+	display: table;
+	margin: auto;
+	margin-top: 15px;
 }
+.well {
+	background: rgb(145, 145, 145);
+}
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

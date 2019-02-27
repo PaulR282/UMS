@@ -1,10 +1,21 @@
 <html>
-<link href="font.css" rel="stylesheet">
-<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
 <head>
     <title>Homeserver</title>
+    <link href="font.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<body id="all">
+
+
+<body id="all" ng-app="ngUMS">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+
     <header>
         <ul>
             <li><a href="/">Home</a></li>
@@ -32,16 +43,24 @@
             </li>
             <li><a>Anderweitiges</a>
                 <ul>
-                    <li><input onclick="display_toggle()"type="button" class="button" value="placehold"></li>
-                    <li><input type="button" class="button" value="placehold"></li>
+                    <li><input onclick="display_toggle(weahrung)" type="button" class="button" value="W&auml;hrung"></li>
+                    <li><input onclick="display_toggle(kochen)" type="button" class="button" value="Kochen"></li>
+                    <li><input onclick="display_toggle(daten)" type="button" class="button" value="Daten"></li>
                 </ul>
             </li>
         </ul>
     </header>
+   
     <div>
-        <div id="laenge" style="display: none"></div>
+        <div id="laenge" style="display: none" class="well">
+            <div class="well">L&auml;nge</div>
+        </div>
         <div id="volumen" style="display: none"></div>
     </div>
+
+
+
 </body>
 </div>
+
 </html>
