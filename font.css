@@ -1,76 +1,110 @@
 body {
-	background-color: grey;
-	font-family: Arial;
-	color: white;
-	font-size: 20px;
+    background: url('bg.png')no-repeat;
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
 
 }
+
 ul {
-	padding: 0px;
-	list-style: none;
+    padding: 0px;
+    list-style: none;
+    z-index: 100;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
 }
-ul li {
-	float: left;
-	width: 200px;
-	height: 40px;
-	background-color: black;
-	opacity: .9;
-	line-height: 40px;
-	margin-right: 3px;
-}
-ul li a {
-	text-decoration: none;
-	color: white;
-	display: block;
-	text-align: center;
-}
-ul li a:hover {
-	background-color: green;
-	color: white;
-	text-decoration: none;
-	transition: 0.35s;
-}
-ul li ul li {
-	margin: 0px;
-	display: none;
 
-	
+ul li {
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    opacity: .9;
+    line-height: 40px;
+    margin-right: 3px;
+}
+
+ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+ul li a:hover {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    transition: 0.35s;
+}
+
+ul li ul li {
+    margin: 0px;
+    display: none;
+    transition: 2s;
+    z-index: 100;
+}
+ul li ul li input {
+    z-index: 100;
 }
 ul li:hover ul li {
-	display: block;
+    display: block;
 }
 
-div.input {
+div.input {}
 
-}
 .button {
-	background-color:black;
-	border: none;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	display: block;
-	font-size: 20px;
-	width: 200px;
-	height: 40px;
-	cursor: pointer;
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
 }
+
 .button:hover {
-	background-color: green;
+    background-color: green;
+}
+#header {
+    display: table;
+    margin: auto;
+    margin-top: 15px;
+}
+.container {
+	z-index: -1;
+}
+.card {
+    background-color: rgba(235,235,235,0.6);
+}
+.form-control {
+    width: 40%;
+    margin-top: 15px;
+    margin-left: 5%;
+    text-align: right;
+}
+.input-group-append {
+    width: 60%;
+    margin-top: 15px;
+    text-align: left;
+}
+.show_header_text {
+	margin-top: 5px;
+}
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
 }
 #laenge {
- margin-top: 15px;
- text-align: center;
- margin-left: 15%;
- margin-right: 15%;	
-} 
-
-header {
-	display: table;
-	margin: auto;
-	margin-top: 15px;
+    margin-top: 55px;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
 }
-.well {
-	background: rgb(145, 145, 145);
-}
-.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

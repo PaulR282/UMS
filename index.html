@@ -1,22 +1,21 @@
-<html>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="de">
 <head>
     <title>Homeserver</title>
     <link href="font.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-
-
-<body id="all" ng-app="ngUMS">
+<body ng-app="ngUMS">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    
-
-    <header>
+    <div class="all">
+    <div id="header">
         <ul>
             <li><a href="/">Home</a></li>
             <li><a>Mathe</a>
@@ -50,16 +49,18 @@
             </li>
         </ul>
     </header>
-   
-    <div>
-        <div id="laenge" style="display: none" class="well">
-            <div class="well">L&auml;nge</div>
+    <div class="container">
+        <div id="laenge" style="display: none" class="card card-body bg-light">
+            <div class="show_header_text"> L&auml;nge umrechnen</div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="mm" >
+                <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+                </div>
+            </div>
         </div>
-        <div id="volumen" style="display: none"></div>
     </div>
-
-
-
+</div>
 </body>
 </div>
 
