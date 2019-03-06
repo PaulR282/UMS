@@ -1,5 +1,5 @@
 body {
-    background: url('bg.png')no-repeat;
+    background: url('bg.png')repeat;
     font-family: Arial;
     color: white;
     font-size: 20px;
@@ -75,6 +75,8 @@ div.input {}
     display: table;
     margin: auto;
     margin-top: 15px;
+    z-index: 5;
+    position: relative;
 }
 .container {
 	z-index: -1;
@@ -95,6 +97,7 @@ div.input {}
     width: 10%;
     margin-top: 15px;
     text-align: right;
+    margin-right: 5%;
 }
 .show_header_text {
 	margin-top: 5px;
@@ -106,12 +109,14 @@ div.input {}
     cursor: pointer;
 }
 #laenge {
+	z-index: 1;
 	width : 80%;
-    margin-top: 15%;
+    margin-top: 25px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 #exampleFormControlSelect1 {
 	width: 10%;
+	text-align: left;
 }

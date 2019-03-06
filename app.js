@@ -1,12 +1,8 @@
 angular.module('ngUMS', ['ui.bootstrap']);
 var app = angular.module("ngUMS", []);
 app.controller("ngCtrl", function($scope) {
-	$scope.laenge = [
-	"mm", "cm","m","km",]
-});
-
-$scope.laenge=[
-"nm","mm","cm","dm","m","km","Yards","Zoll","Meilen","Seemeilen","Fuß",]
+	$scope.laenge=[
+"μm","mm","cm","dm","m","km","Yards","Zoll","Meilen","Seemeilen","Fuß",]
 
 $scope.volumen=[
 "ml","dl","L","mm³","cm³","dm³","Gallonen","Zoll³","Fuß³","yard³",]
@@ -46,3 +42,5 @@ $scope.kochen=[
 
 $scope.Daten=[
 "bite","kb","mb","gb","tb","kbit/s","mbit/s",]
+});
+

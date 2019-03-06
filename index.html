@@ -50,29 +50,28 @@
                     </ul>
                 </li>
             </ul>
-            </header>
-            <div class="container">
-                <div id="laenge" style="display: none" class="card w-70 card-body bg-light">
-                    <div class="show_header_text"> L&auml;nge umrechnen</div>
-                    <div>
+        </div>
+        <div class="container">
+            <div id="laenge" style="display: none" class="card w-70 card-body bg-light">
+                <div class="show_header_text"> L&auml;nge umrechnen</div>
+                <div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="input1">
-                        <select class="form-control" id="exampleFormControlSelect1" >
+                        <input type="text" class="form-control" id="input1" placeholder="Eingabe">
+                        <select class="form-control" id="exampleFormControlSelect1" placeholder="Einheit auswählen">
+                            <option value="" disabled selected hidden>Einheit auswählen</option>
                             <option ng-repeat="x in laenge" value={{x}}>{{x}}</option>
                         </select>
+                    </div>
+                    <button onclick="leange()" class="btn btn-success" type="button">Umrechnen</button>
+                    <div class="input-group mb-3" ng-repeat="x in laenge">
+                        <input type="text" class="form-control" id={{x}}>
+                        <div class="input-group-append">
+                            <span class="input-group-text">{{x}}</span>
                         </div>
-                        <button onclick="leange()" class="btn btn-success" type="button">Umrechnen</button>
-
-                        <div class="input-group mb-3" ng-repeat="x in laenge" >
-                            <input type="text" class="form-control" id={{x}}>
-                            <div class="input-group-append">
-                                <span class="input-group-text">{{x}}</span>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
+        </div>
 </body>
 </div>
 
