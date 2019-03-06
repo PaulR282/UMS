@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <title>Homeserver</title>
     <link href="font.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body ng-app="ngUMS">
+
+<body ng-app="ngUMS" ng-controller="ngCtrl">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="script.js"></script>
@@ -15,52 +17,62 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <div class="all">
-    <div id="header">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a>Mathe</a>
-                <ul>
-                    <li><input onclick="display_toggle(laenge)" type="button" class="button" value="L&auml;nge"></li>
-                    <li><input onclick="display_toggle(volumen)" type="button" class="button" value="Volumen"></li>
-                    <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
-                    <li><input onclick="display_toggle(flaeche)" type="button" class="button" value="Fl&auml;che"></li>
-                    <li><input onclick="display_toggle(zeit)" type="button" class="button" value="Zeit"></li>
-                    <li><input onclick="display_toggle(winkel)" type="button" class="button" value="Winkel"></li>
-                </ul>
-            </li>
-            <li><a>Physik</a>
-                <ul>
-                    <li><input onclick="display_toggle(temperatur)" type="button" class="button" value="Temperatur"></li>
-                    <li><input onclick="display_toggle(speed)" type="button" class="button" value="Geschwindigkeit"></li>
-                    <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
-                    <li><input onclick="display_toggle(gewicht)" type="button" class="button" value="Gewicht"></li>
-                    <li><input onclick="display_toggle(druck)" type="button" class="button" value="Druck"></li>
-                    <li><input onclick="display_toggle(kraft)" type="button" class="button" value="Kraft"></li>
-                    <li><input onclick="display_toggle(arbeit)" type="button" class="button" value="Arbeit"></li>
-                    <li><input onclick="display_toggle(leistung)" type="button" class="button" value="Leistung"></li>
-                </ul>
-            </li>
-            <li><a>Anderweitiges</a>
-                <ul>
-                    <li><input onclick="display_toggle(weahrung)" type="button" class="button" value="W&auml;hrung"></li>
-                    <li><input onclick="display_toggle(kochen)" type="button" class="button" value="Kochen"></li>
-                    <li><input onclick="display_toggle(daten)" type="button" class="button" value="Daten"></li>
-                </ul>
-            </li>
-        </ul>
-    </header>
-    <div class="container">
-        <div id="laenge" style="display: none" class="card card-body bg-light">
-            <div class="show_header_text"> L&auml;nge umrechnen</div>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="mm" >
-                <div class="input-group-append">
-                    <span class="input-group-text">mm</span>
+        <div id="header">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a>Mathe</a>
+                    <ul>
+                        <li><input onclick="display_toggle(laenge)" type="button" class="button" value="L&auml;nge"></li>
+                        <li><input onclick="display_toggle(volumen)" type="button" class="button" value="Volumen"></li>
+                        <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
+                        <li><input onclick="display_toggle(flaeche)" type="button" class="button" value="Fl&auml;che"></li>
+                        <li><input onclick="display_toggle(zeit)" type="button" class="button" value="Zeit"></li>
+                        <li><input onclick="display_toggle(winkel)" type="button" class="button" value="Winkel"></li>
+                    </ul>
+                </li>
+                <li><a>Physik</a>
+                    <ul>
+                        <li><input onclick="display_toggle(temperatur)" type="button" class="button" value="Temperatur"></li>
+                        <li><input onclick="display_toggle(speed)" type="button" class="button" value="Geschwindigkeit"></li>
+                        <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
+                        <li><input onclick="display_toggle(gewicht)" type="button" class="button" value="Gewicht"></li>
+                        <li><input onclick="display_toggle(druck)" type="button" class="button" value="Druck"></li>
+                        <li><input onclick="display_toggle(kraft)" type="button" class="button" value="Kraft"></li>
+                        <li><input onclick="display_toggle(arbeit)" type="button" class="button" value="Arbeit"></li>
+                        <li><input onclick="display_toggle(leistung)" type="button" class="button" value="Leistung"></li>
+                    </ul>
+                </li>
+                <li><a>Anderweitiges</a>
+                    <ul>
+                        <li><input onclick="display_toggle(weahrung)" type="button" class="button" value="W&auml;hrung"></li>
+                        <li><input onclick="display_toggle(kochen)" type="button" class="button" value="Kochen"></li>
+                        <li><input onclick="display_toggle(daten)" type="button" class="button" value="Daten"></li>
+                    </ul>
+                </li>
+            </ul>
+            </header>
+            <div class="container">
+                <div id="laenge" style="display: none" class="card w-70 card-body bg-light">
+                    <div class="show_header_text"> L&auml;nge umrechnen</div>
+                    <div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="input1">
+                        <select class="form-control" id="exampleFormControlSelect1" >
+                            <option ng-repeat="x in laenge" value={{x}}>{{x}}</option>
+                        </select>
+                        </div>
+                        <button onclick="leange()" class="btn btn-success" type="button">Umrechnen</button>
+
+                        <div class="input-group mb-3" ng-repeat="x in laenge" >
+                            <input type="text" class="form-control" id={{x}}>
+                            <div class="input-group-append">
+                                <span class="input-group-text">{{x}}</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 </body>
 </div>
 

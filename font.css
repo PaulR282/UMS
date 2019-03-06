@@ -78,20 +78,23 @@ div.input {}
 }
 .container {
 	z-index: -1;
+	width: 80%;
 }
 .card {
     background-color: rgba(235,235,235,0.6);
+    width: 80%;
+    margin: auto;
 }
 .form-control {
-    width: 40%;
+    width: 20%;
     margin-top: 15px;
     margin-left: 5%;
     text-align: right;
 }
 .input-group-append {
-    width: 60%;
+    width: 10%;
     margin-top: 15px;
-    text-align: left;
+    text-align: right;
 }
 .show_header_text {
 	margin-top: 5px;
@@ -103,8 +106,12 @@ div.input {}
     cursor: pointer;
 }
 #laenge {
-    margin-top: 55px;
+	width : 80%;
+    margin-top: 15%;
     text-align: center;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#exampleFormControlSelect1 {
+	width: 10%;
 }
