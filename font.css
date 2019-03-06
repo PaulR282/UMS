@@ -70,7 +70,5 @@ header {
 	margin: auto;
 	margin-top: 15px;
 }
-.well {
-	background: rgb(145, 145, 145);
-}
+
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
