@@ -2,7 +2,7 @@
 <html lang="de">
 
 <head>
-    <title>Homeserver</title>
+    <title>Umrechnungsseite</title>
     <link href="font.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -23,9 +23,9 @@
                 <li><a>Mathe</a>
                     <ul>
                         <li><input onclick="display_toggle(laenge)" type="button" class="button" value="L&auml;nge"></li>
+                        <li><input onclick="display_toggle(flaeche)" type="button" class="button" value="Fl&auml;che"></li>
                         <li><input onclick="display_toggle(volumen)" type="button" class="button" value="Volumen"></li>
                         <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
-                        <li><input onclick="display_toggle(flaeche)" type="button" class="button" value="Fl&auml;che"></li>
                         <li><input onclick="display_toggle(zeit)" type="button" class="button" value="Zeit"></li>
                         <li><input onclick="display_toggle(winkel)" type="button" class="button" value="Winkel"></li>
                     </ul>
@@ -42,7 +42,7 @@
                         <li><input onclick="display_toggle(leistung)" type="button" class="button" value="Leistung"></li>
                     </ul>
                 </li>
-                <li><a>Anderweitiges</a>
+                <li><a>Sonstiges</a>
                     <ul>
                         <li><input onclick="display_toggle(weahrung)" type="button" class="button" value="W&auml;hrung"></li>
                         <li><input onclick="display_toggle(kochen)" type="button" class="button" value="Kochen"></li>
@@ -56,7 +56,7 @@
                 <div class="show_header_text"> L&auml;nge umrechnen</div>
                 <div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="input1" placeholder="Eingabe">
+                        <input type="text" class="form-control" id="input1" placeholder="Eingabe" style="width: 65%">
                         <select class="form-control" id="exampleFormControlSelect1" placeholder="Einheit auswählen">
                             <option value="" disabled selected hidden>Einheit auswählen</option>
                             <option ng-repeat="x in laenge" value={{x}}>{{x}}</option>
@@ -64,7 +64,7 @@
                     </div>
                     <button onclick="leange()" class="btn btn-success" type="button">Umrechnen</button>
                     <div class="input-group mb-3" ng-repeat="x in laenge">
-                        <input type="text" class="form-control" id={{x}}>
+                        <input type="number" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
                         <div class="input-group-append">
                             <span class="input-group-text">{{x}}</span>
                         </div>

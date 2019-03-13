@@ -29,7 +29,7 @@ $scope.Druck=[
 "Pa","kPa","Bar","psi","ksi","psf",]
 
 $scope.Kraft=[
-"N","kN","daN",]
+"N","kN"]
 
 $scope.Arbeit=[
 "J","kJ","cal","kcal","kwh",]
@@ -38,9 +38,9 @@ $scope.leistung=[
 "W","kW","mW","kcal/s","kcal/h","ps","hpower",]
 
 $scope.kochen=[
-"ml","teaspoon","cup(US)","cup(GB)","cup(metrisch)","gramm","Unzen(US)","Unzen(GB)",]
+"ml","teaspoon","cup(US)","cup(GB)","cup(metrisch)","Gramm","Unzen(US)","Unzen(GB)",]
 
 $scope.Daten=[
-"bite","kb","mb","gb","tb","kbit/s","mbit/s",]
+"bite","kb","mb","gb","tb"]
 });
 
