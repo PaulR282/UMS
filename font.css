@@ -108,12 +108,20 @@ div.input {}
 .panel-title a {
     cursor: pointer;
 }
-#exampleFormControlSelect1 {
+
+#select_flaeche, #select_volumen, #select_laenge, #select_masse, #select_zeit, #select_gewicht, #select_winkel, #select_temperatur, #select_geschwindigkeit, #select_druck, #select_kraft, #select_arbeit, #select_leistung, #select_währung, #select_kochen, #select_daten {
 	width: 20%;
 	text-align: left;
 	margin-left: 5px;
 }
-#laenge {
+#input3, #input5, #input6 {
+	margin-left: 5px;
+}
+
+.card-body {
+	opacity: 1;
+}
+#flaeche, #volumen, #laenge, #masse, #gewicht, #zeit, #winkel, #temperatur, #geschwindigkeit, #druck, #kraft, #arbeit, #leistung, #waehrung, #kochen, #daten {
 	z-index: 1;
 	width : 95%;
     margin-top: 25px;
@@ -121,7 +129,4 @@ div.input {}
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 150px;
-}
-.card-body {
-	opacity: 1;
 }
