@@ -1,3 +1,4 @@
+var x2 = ["test"];
 function display_toggle(container) {
     var x = document.getElementById(container);
     if (container.style.display === "none") {
@@ -5,8 +6,11 @@ function display_toggle(container) {
     } else if (container.style.display === "block") {
         container.style.display = "none";
     }
-    var x2=container.getattribute("name");
-    document.write(x2)
+    var name=container.getAttribute("id");
+    let len = x2.push(name);
+    if (len > 2) {
+   	x2[1].style.display ==="none"
+    };
 }
 
 function laenge2() {
