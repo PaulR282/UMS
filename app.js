@@ -17,10 +17,10 @@ $scope.flaeche2=[
 "mm²","cm²","dm²","m²","ar","ha","km²","Zoll²","Fuß²","Yard²","Meile²",]
 
 $scope.zeit=[
-"nanosec","ms","s","min","stunden","tage","wochen","Jahre",]
+"ns","ms","s","min","Stunden","Tage","Wochen","Jahre",]
 
 $scope.winkel=[
-"gradmaß","bogenmaß","%",]
+"Gradmaß","Bogenmaß","%",]
 
 $scope.temperatur=[
 "°C","K","°F",]
