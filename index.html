@@ -35,9 +35,8 @@
                         <li><input onclick="display_toggle(temperatur)" type="button" class="button" value="Temperatur"></li>
                         <li><input onclick="display_toggle(geschwindigkeit)" type="button" class="button" value="Geschwindigkeit"></li>
                         <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
-                        <li><input onclick="display_toggle(gewicht)" type="button" class="button" value="Gewicht"></li>
                         <li><input onclick="display_toggle(druck)" type="button" class="button" value="Druck"></li>
-                        <li><input onclick="display_toggle(kraft)" type="button" class="button" value="Kraft"></li>
+                        <li><input onclick="display_toggle(kraft)" type="button" class="button" value="Gewichtskraft"></li>
                         <li><input onclick="display_toggle(arbeit)" type="button" class="button" value="Arbeit"></li>
                         <li><input onclick="display_toggle(leistung)" type="button" class="button" value="Leistung"></li>
                     </ul>
@@ -150,25 +149,6 @@
                     </div>
                 </div>
             </div>
-            <div id="gewicht" style="display: none" class="card w-70 card-body bg-light">
-                <div class="show_header_text">Gewicht umrechnen</div>
-                <div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="input9" placeholder="Eingabe" style="width: 25%">
-                        <select class="form-control" id="select_gewicht" placeholder="Einheit auswählen">
-                            <option value="" disabled selected hidden>Einheit auswählen</option>
-                            <option ng-repeat="x in gewicht" value={{x}}>{{x}}</option>
-                        </select>
-                    </div>
-                    <button onclick="gewicht2()" class="btn btn-success" type="button">Umrechnen</button>
-                    <div class="input-group mb-3" ng-repeat="x in gewicht">
-                        <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
-                        <div class="input-group-append">
-                            <span class="input-group-text">{{x}}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div id="winkel" style="display: none" class="card w-70 card-body bg-light">
                 <div class="show_header_text">Winkel umrechnen</div>
                 <div>
@@ -246,7 +226,7 @@
                 </div>
             </div>
             <div id="kraft" style="display: none" class="card w-70 card-body bg-light">
-                <div class="show_header_text">Kraft umrechnen</div>
+                <div class="show_header_text">Gewichtskraft umrechnen</div>
                 <div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" id="input14" placeholder="Eingabe" style="width: 25%">

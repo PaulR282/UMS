@@ -1,4 +1,5 @@
 var x2 = [];
+var pi = Math.PI;
 function display_toggle(container) {
     var x = document.getElementById(container);
     if (container.style.display === "none") {
@@ -12,11 +13,8 @@ function display_toggle(container) {
     	var close = document.getElementById(x2[0])
    	 	close.style.display ="none";
    	 	x2.shift();
-  
-
-    };
+   };
 }
-
 function laenge2() {
     var a1 = document.getElementById('input1').value;
     var a6= a1.replace(/,/, ".");
@@ -58,6 +56,71 @@ function laenge2() {
     var a29 = document.getElementById('Seemeilen').value = a11 / 1000000000 / 1.852;
     var a30 = document.getElementById('Fuß').value = a11 / 304800;
 }
+function zeit2() {
+
+	var e1 = document.getElementById('input8').value;
+        var e6  = e1.replace(/,/, ".");
+        if (isNaN(e6))  {
+     
+        alert(e6+ ' ist keine Zahl!');
+      }
+	var oper = document.getElementById('select_zeit').value;
+	if (oper==="ns")
+		var e11 =  e6/1000000;
+	if (oper==="ms")
+		var e11 =  e6;
+	if (oper==="s") 
+		var e11 = e6*1000;
+	if (oper==="min") 
+		var e11 = e6*60000;
+	if (oper ==="Stunden")
+		var e11 =  e6*3600000;
+	if (oper ==="Tage")
+	        var e11 =  e6*86400000;
+	if (oper ==="Wochen")
+		var e11 =  e6*604800000;
+	if (oper ==="Jahre")
+		var e11 =  e6*31540000000;
+	var e20 = document.getElementById('ns').value = e11*1000000;
+	var e21 = document.getElementById('ms').value = e11;
+	var e22 = document.getElementById('s').value = e11/1000;
+	var e23 = document.getElementById('min').value = e11/60000;
+	var e24 = document.getElementById('Stunden').value = e11/3600000;
+	var e25 = document.getElementById('Tage').value = e11/86400000;
+	var e26 = document.getElementById('Wochen').value = e11/604800000;
+	var e27 = document.getElementById('Jahre').value = e11/31540000000;
+}
+function masse2() {
+                                                       
+	var d1 = document.getElementById('input7').value;
+          var d7 = d1.replace(/,/, ".");
+        if (isNaN(d7)) {
+     
+        alert(d7 +' ist keine Zahl!');
+      }
+
+	var oper = document.getElementById('select_masse').value;
+	if (oper==="mg")
+		var d11 = d7;
+	if (oper==="g") 
+		var d11 =d7*1000;
+	if (oper==="kg") 
+		var d11 =d7*1000000;
+	if (oper ==="t")
+		var d11 = d7*1000000000;
+	if (oper ==="Pfund(lb)")
+		var d11 = d7*453592.37;
+	if (oper ==="Unze(oz")
+		var d11 = d7*28349.523;
+
+	var d20 = document.getElementById('mg').value = d11;
+	var d21 = document.getElementById('g').value = d11/1000;
+	var d22 = document.getElementById('kg').value = d11/1000000;
+	var d23 = document.getElementById('t').value = d11/1000000000;
+	var d24 = document.getElementById('Pfund(lb)').value = d11/453592.37;
+	var d25 = document.getElementById('Unze(oz)').value = d11/28349.523;
+}
+// done
 
 function flaeche2() {
     var b1 = document.getElementById('input2').value;
@@ -120,7 +183,7 @@ function temperatur2() {
 }		
 function winkel2() {
 
-	var g1 = document.getElementById('input9').value;
+	var g1 = document.getElementById('input10').value;
         var g7  = g1.replace(/,/, ".");
         if (isNaN(g7))  {
      
@@ -128,56 +191,15 @@ function winkel2() {
       }
 	var oper = document.getElementById('select_winkel').value;
 	if (oper==="Grad")
-		var g11 =  g7;
+		var g11 = g7;
 	if (oper==="Radiant") 
-		var g11 = g7*1*$degree * Math.PI / 180;
+		var g11 = g7*(180/pi);
 	if (oper==="%") 
-		var g11 = 360*g7/100;	
-	var g20 = document.getElementById('Grad').value = g7;
-	var g21 = document.getElementById('Radiant').value = g7/1/$degree / Math.PI * 180;
-	var g22 = document.getElementById('%').value = 360/g7*100;
-
+		var g11 = Math.atan(g7/100);	
+	var g20 = document.getElementById('Grad').value = g11;
+	var g21 = document.getElementById('Radiant').value = g11 * (pi/180);
+	var g22 = document.getElementById('%').value = Math.tan(g11)*100;
 }
-function zeit2() {
-
-	var e1 = document.getElementById('input8').value;
-        var e6  = e1.replace(/,/, ".");
-        if (isNaN(e6))  {
-     
-        alert(e6+ ' ist keine Zahl!');
-      }
-	var oper = document.getElementById('select_zeit').value;
-	if (oper==="ns")
-		var e11 =  e6/1000000;
-	if (oper==="ms")
-		var e11 =  e6;
-	if (oper==="s") 
-		var e11 = e6*1000;
-	if (oper==="min") 
-		var e11 = e6*60000;
-	if (oper ==="Stunden")
-		var e11 =  e6*3600000;
-	if (oper ==="Tage")
-	        var e11 =  e6*86400000;
-	if (oper ==="Wochen")
-		var e11 =  e6*604800000;
-	if (oper ==="Jahre")
-		var e11 =  e6*31540000000;
-	var e20 = document.getElementById('ns').value = e11*1000000;
-	var e21 = document.getElementById('ms').value = e11;
-	var e22 = document.getElementById('s').value = e11/1000;
-	var e23 = document.getElementById('min').value = e11/60000;
-	var e24 = document.getElementById('Stunden').value = e11/3600000;
-	var e25 = document.getElementById('Tage').value = e11/86400000;
-	var e26 = document.getElementById('Wochen').value = e11/604800000;
-	var e27 = document.getElementById('Jahre').value = e11/31540000000;
-
-
-
-
-}
-
-
 function volumen2() {
 
 	var c1 = document.getElementById('input4').value;
@@ -189,7 +211,7 @@ function volumen2() {
         if (isNaN(c6) || isNaN(c7)||isNaN(c8)) {
         alert(c6 +' und' +c7+ ' und' +c8+ ' sind keine Zahl!');
       }
-	var oper = document.getElementById('select.volumen').value;
+	var oper = document.getElementById('select_volumen').value;
 	if (oper==="ml")
 		var c11 =  c*c2*c3;
 	if (oper==="dl") 
@@ -220,11 +242,4 @@ function volumen2() {
 	var c27 = document.getElementById('Zoll³').value = c11/1000000*39.37;
 	var c28 = document.getElementById('Fuß³').value = c11/1000000000/1.609;
 	var c29 = document.getElementById('Yards³').value = c11/1000000000/1.852;
-
 }
-
-
-
-
-
-

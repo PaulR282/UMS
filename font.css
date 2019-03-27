@@ -109,7 +109,7 @@ div.input {}
     cursor: pointer;
 }
 
-#select_flaeche, #select_volumen, #select_laenge, #select_masse, #select_zeit, #select_gewicht, #select_winkel, #select_temperatur, #select_geschwindigkeit, #select_druck, #select_kraft, #select_arbeit, #select_leistung, #select_währung, #select_kochen, #select_daten {
+#select_flaeche, #select_volumen, #select_laenge, #select_masse, #select_zeit, #select_winkel, #select_temperatur, #select_geschwindigkeit, #select_druck, #select_kraft, #select_arbeit, #select_leistung, #select_währung, #select_kochen, #select_daten {
 	width: 20%;
 	text-align: left;
 	margin-left: 5px;
@@ -121,7 +121,7 @@ div.input {}
 .card-body {
 	opacity: 1;
 }
-#flaeche, #volumen, #laenge, #masse, #gewicht, #zeit, #winkel, #temperatur, #geschwindigkeit, #druck, #kraft, #arbeit, #leistung, #waehrung, #kochen, #daten {
+#flaeche, #volumen, #laenge, #masse, #zeit, #winkel, #temperatur, #geschwindigkeit, #druck, #kraft, #arbeit, #leistung, #waehrung, #kochen, #daten {
 	z-index: 1;
 	width : 95%;
     margin-top: 25px;

@@ -9,7 +9,7 @@ $scope.volumen=[
 $scope.volumen2=[
 "mm","cm","dm","Zoll","Fuß","yard",]
 $scope.masse=[
-"kg","g","mg","T","Lbs","Unze","Newton",]
+"kg","g","mg","t","Pfund(lb)","Unze(oz)",]
 
 $scope.flaeche=[
 "mm","cm","dm","m","km","Zoll","Fuß","Yard","Meile",]
@@ -20,7 +20,7 @@ $scope.zeit=[
 "ns","ms","s","min","Stunden","Tage","Wochen","Jahre",]
 
 $scope.winkel=[
-"Gradmaß","Bogenmaß","%",]
+"Grad","Radiant","%",]
 
 $scope.temperatur=[
 "°C","K","°F",]
@@ -32,7 +32,7 @@ $scope.druck=[
 "Pa","kPa","Bar","psi","ksi","psf",]
 
 $scope.kraft=[
-"N","kN"]
+"N","kN", "kgf", "lbf"]
 
 $scope.arbeit=[
 "J","kJ","cal","kcal","kwh",]
