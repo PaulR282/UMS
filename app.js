@@ -5,9 +5,9 @@ app.controller("ngCtrl", function($scope) {
 "μm","mm","cm","dm","m","km","Yards","Zoll","Meilen","Seemeilen","Fuß",]
 
 $scope.volumen=[
-"ml","dl","L","mm³","cm³","dm³","Gallonen","Zoll³","Fuß³","yard³",]
+"ml","dl","L","mm³","cm³","dm³","m³","Gallonen","Zoll³","Fuß³","Yard³",]
 $scope.volumen2=[
-"mm","cm","dm","Zoll","Fuß","yard",]
+"mm","cm","dm","m","Zoll","Fuß","Yard",]
 $scope.masse=[
 "kg","g","mg","t","Pfund(lb)","Unze(oz)",]
 
@@ -20,17 +20,16 @@ $scope.zeit=[
 "ns","ms","s","min","Stunden","Tage","Wochen","Jahre",]
 
 $scope.winkel=[
-"Grad","Radiant","%",]
+"Grad","Radiant",]
 
 $scope.temperatur=[
 "°C","K","°F",]
 
 $scope.geschwindigkeit=[
-"m/s","m/min","km/s","km/min","km/h","Meilen/h","Knoten",]
+"m/s","Fuß/s","km/h","Meilen/h","Knoten",]
 
 $scope.druck=[
-"Pa","kPa","Bar","psi","ksi","psf",]
-
+"Pa","Bar","Torr","PhA","lbf/in²",]
 $scope.kraft=[
 "N","kN", "kgf", "lbf"]
 
@@ -45,5 +44,7 @@ $scope.kochen=[
 
 $scope.daten=[
 "bite","kb","mb","gb","tb"]
+$scope.waehrung=[
+"€", "$"]
 });
 

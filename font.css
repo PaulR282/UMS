@@ -109,7 +109,7 @@ div.input {}
     cursor: pointer;
 }
 
-#select_flaeche, #select_volumen, #select_laenge, #select_masse, #select_zeit, #select_winkel, #select_temperatur, #select_geschwindigkeit, #select_druck, #select_kraft, #select_arbeit, #select_leistung, #select_währung, #select_kochen, #select_daten {
+#select_flaeche, #select_volumen, #select_laenge, #select_masse, #select_zeit, #select_winkel, #select_temperatur, #select_geschwindigkeit, #select_druck, #select_kraft, #select_arbeit, #select_leistung, #select_waehrung, #select_kochen, #select_daten {
 	width: 20%;
 	text-align: left;
 	margin-left: 5px;
