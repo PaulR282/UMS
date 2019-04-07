@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Umrechnungsseite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="font.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body ng-app="ngUMS" ng-controller="ngCtrl">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+     <div id="help">
+                        <button class="btn" style="color: white" onclick="test()">Klick mich&nbsp;<i class="fas fa-arrow-right"></i> <i class="far fa-question-circle"></i></button>
+                    </div>
+    <div class="all">
+
+        <div id="header">
+
+            <ul>
+                <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+                <li><a>Mathe</a>
+                    <ul>
+                        <li><input onclick="display_toggle(laenge)" type="button" class="button" value="L&auml;nge"></li>
+                        <li><input onclick="display_toggle(flaeche)" type="button" class="button" value="Fl&auml;che"></li>
+                        <li><input onclick="display_toggle(volumen)" type="button" class="button" value="Volumen"></li>
+                        <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
+                        <li><input onclick="display_toggle(zeit)" type="button" class="button" value="Zeit"></li>
+                        <li><input onclick="display_toggle(winkel)" type="button" class="button" value="Winkel"></li>
+                    </ul>
+                </li>
+                <li><a>Physik</a>
+                    <ul>
+                        <li><input onclick="display_toggle(temperatur)" type="button" class="button" value="Temperatur"></li>
+                        <li><input onclick="display_toggle(geschwindigkeit)" type="button" class="button" value="Geschwindigkeit"></li>
+                        <li><input onclick="display_toggle(masse)" type="button" class="button" value="Masse"></li>
+                        <li><input onclick="display_toggle(druck)" type="button" class="button" value="Druck"></li>
+                        <li><input onclick="display_toggle(kraft)" type="button" class="button" value="Gewichtskraft"></li>
+                        <li><input onclick="display_toggle(arbeit)" type="button" class="button" value="Arbeit"></li>
+                        <li><input onclick="display_toggle(leistung)" type="button" class="button" value="Leistung"></li>
+                    </ul>
+                </li>
+                <li><a>Sonstiges</a>
+                    <ul>
+                        <li><input onclick="display_toggle(waehrung)" type="button" class="button" value="W&auml;hrung"></li>
+                        <li><input onclick="display_toggle(kochen)" type="button" class="button" value="Kochen"></li>
+                        <li><input onclick="display_toggle(daten)" type="button" class="button" value="Daten"></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="container">
+            <div id="laenge" style="display: none" class="card w-70 card-body bg-light">
+                <div class="show_header_text"> L&auml;nge umrechnen</div>
+                <div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="input1" placeholder="Eingabe" style="width: 55%" onchange="laenge2()">
+                        <select class="form-control" id="select_laenge" placeholder="Einheit auswählen" onchange="laenge2()">
+                            <option value="" disabled selected hidden>Einheit auswählen</option>
+                            <option ng-repeat="x in laenge" value={{x}}>{{x}}</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3" ng-repeat="x in laenge">
+                        <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                        <div class="input-group-append">
+                            <span class="input-group-text">{{x}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="flaeche" style="display: none" class="card w-70 card-body bg-light">
+                <div class="show_header_text"> Fl&auml;che umrechnen</div>
+                <div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="input2" placeholder="Eingabe" style="width: 25%" onchange="flaeche2(1)">
+                        <input type="text" class="form-control" id="input3" placeholder="Eingabe" style="width: 25%" onchange="flaeche2(1)">
+                        <select class="form-control" id="select_flaeche" placeholder="Einheit auswählen" onchange="flaeche2(1)">
+                            <option value="" disabled selected hidden>Einheit auswählen</option>
+                            <option ng-repeat="x in flaeche" value={{x}}>{{x}}</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#alternativlaenge" aria-expanded="false">Alternative Eingabe</button>
+                    <div class="collapse" id="alternativlaenge">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="input9" placeholder="Eingabe" style="width: 25%" onchange="flaeche2(2)">
+                            <select class="form-control" id="select_flaeche2" placeholder="Einheit auswählen" onchange="flaeche2(2)">
+                                <option value="" disabled selected hidden>Einheit auswählen</option>
+                                <option ng-repeat="x in flaeche2" value={{x}}>{{x}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in flaeche2">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="volumen" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Volumen umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input4" placeholder="Eingabe" size="4" onchange="volumen2(1)">
+                    <input type="text" class="form-control" id="input5" placeholder="Eingabe" size="4" onchange="volumen2(1)">
+                    <input type="text" class="form-control" id="input6" placeholder="Eingabe" size="4" onchange="volumen2(1)">
+                    <select class="form-control" id="select_volumen" placeholder="Einheit auswählen" onchange="volumen2(1)">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in volumen2" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#alternativvolumen" aria-expanded="false">Alternative Eingabe</button>
+                <div class="collapse" id="alternativvolumen">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="input20" placeholder="Eingabe" style="width: 25%" onchange="volumen2(2)">
+                        <select class="form-control" id="select_volumen2" placeholder="Einheit auswählen" onchange="volumen2(2)">
+                            <option value="" disabled selected hidden>Einheit auswählen</option>
+                            <option ng-repeat="x in volumen" value={{x}}>{{x}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in volumen">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="masse" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Masse umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input7" placeholder="Eingabe" style="width: 25%" onchange="masse2()">
+                    <select class="form-control" id="select_masse" placeholder="Einheit auswählen" onchange="masse2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in masse" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in masse">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="zeit" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Zeit umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input8" placeholder="Eingabe" style="width: 25%" onchange="zeit2()">
+                    <select class="form-control" id="select_zeit" placeholder="Einheit auswählen" onchange="zeit2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in zeit" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in zeit">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="winkel" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Winkel umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input10" placeholder="Eingabe" style="width: 25%" onchange="winkel2()">
+                    <select class="form-control" id="select_winkel" placeholder="Einheit auswählen" onchange="winkel2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in winkel" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in winkel">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="temperatur" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Temperatur umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input11" placeholder="Eingabe" style="width: 25%" onchange="temperatur2()">
+                    <select class="form-control" id="select_temperatur" placeholder="Einheit auswählen" onchange="temperatur2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in temperatur" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in temperatur">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="geschwindigkeit" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Geschwindigkeit umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input12" placeholder="Eingabe" style="width: 25%" onchange="geschwindigkeit2()">
+                    <select class="form-control" id="select_geschwindigkeit" placeholder="Einheit auswählen" onchange="geschwindigkeit2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in geschwindigkeit" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in geschwindigkeit">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="druck" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Druck umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input13" placeholder="Eingabe" style="width: 25%" onchange="druck2()">
+                    <select class="form-control" id="select_druck" placeholder="Einheit auswählen" onchange="druck2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in druck" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in druck">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="kraft" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Gewichtskraft umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input14" placeholder="Eingabe" style="width: 25%" onchange="kraft2()">
+                    <select class="form-control" id="select_kraft" placeholder="Einheit auswählen" onchange="kraft2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in kraft" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in kraft">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="arbeit" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Arbeit umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input15" placeholder="Eingabe" style="width: 25%" onchange="arbeit2()">
+                    <select class="form-control" id="select_arbeit" placeholder="Einheit auswählen" onchange="arbeit2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in arbeit" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in arbeit">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="leistung" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Leistung umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input16" placeholder="Eingabe" style="width: 25%" onchange="leistung2()">
+                    <select class="form-control" id="select_leistung" placeholder="Einheit auswählen" onchange="leistung2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in leistung" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in leistung">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="waehrung" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">W&auml;hrung umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input17" placeholder="Eingabe" style="width: 25%" onchange="waehrung2()">
+                    <select class="form-control" id="select_waehrung" placeholder="Einheit auswählen" onchange="waehrung2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in waehrung" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in waehrung">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="kochen" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Kochen umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input18" placeholder="Eingabe" style="width: 25%" onchange="kochen2()">
+                    <select class="form-control" id="select_kochen" placeholder="Einheit auswählen" onchange="kochen2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in kochen" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in kochen">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="daten" style="display: none" class="card w-70 card-body bg-light">
+            <div class="show_header_text">Daten umrechnen</div>
+            <div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input19" placeholder="Eingabe" style="width: 25%" onchange="daten2()">
+                    <select class="form-control" id="select_daten" placeholder="Einheit auswählen" onchange="daten2()">
+                        <option value="" disabled selected hidden>Einheit auswählen</option>
+                        <option ng-repeat="x in daten" value={{x}}>{{x}}</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3" ng-repeat="x in daten">
+                    <input type="test" class="form-control" id={{x}} readonly="readonly" style="background-color: white">
+                    <div class="input-group-append">
+                        <span class="input-group-text">{{x}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</div>
+
+</html>
