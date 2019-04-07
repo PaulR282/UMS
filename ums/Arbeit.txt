@@ -1,0 +1,29 @@
+function arbeit2() {
+l50=l50+1;
+if (l50>1){
+    var l1 = document.getElementById('input15').value;
+    var l6 = l1.replace(/,/, ".");
+    if (isNaN(l6)) {
+
+        alert(l6+'ist keine Zahl!');
+    }
+    var oper = document.getElementById('select_arbeit').value;
+	if (oper==="J")
+		var l11 = l6;
+	if (oper==="kJ") 
+		var l11 = l6*1000;
+	if (oper==="cal") 
+		var l11 = l6*4.184;
+        if (oper==="kcal")
+		var l11 = l6*4184;
+	if (oper==="wh") 
+		var l11 = l6*3600;
+	if (oper==="kwh") 
+		var l11 = l6*3600000;
+	var l20 = document.getElementById('J').value = l6;
+	var l21 = document.getElementById('kJ').value = l6/1000;
+	var l22 = document.getElementById('cal').value = l6/4.184;
+        var l23 = document.getElementById('kcal').value = l6/4184;
+	var l24 = document.getElementById('wh').value = l6/3600;
+	var l25 = document.getElementById('kwh').value = l6/3600000;
+}}				

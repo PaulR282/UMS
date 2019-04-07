@@ -1,0 +1,26 @@
+function geschwindigkeit2() {
+    var I1 = document.getElementById('input12').value;
+    var I6 = I1.replace(/,/, ".");
+    if (isNaN(I6) 
+ {
+
+        alert(I6 + 'Ist keine Zahl!');
+    }
+
+    var oper = document.getElementById('select_geschwindigkeit').value;
+	if (oper==="m/s")
+		var I11 = I6;
+	if (oper==="F/s") 
+		var I11 =I6*3.281;
+	if (oper==="km/h") 
+		var I11 =I6*3.6;
+	if (oper ==="mei/h")
+		var I11 = I*2.237;
+	if (oper ==="Knoten")
+		var I11 = I6*1.944;
+	var I20 = document.getElementById('m/s').value = I11;
+	var I21 = document.getElementById('F/s').value = I11/3.281;
+	var I22 = document.getElementById('km/h').value = I11/3.6;
+	var I23 = document.getElementById('mei/s).value = I11/2.237;
+	var I24 = document.getElementById('Knoten').value = I11/1.944;
+	}
