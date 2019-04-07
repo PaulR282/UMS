@@ -5,7 +5,7 @@ app.controller("ngCtrl", function($scope) {
 "μm","mm","cm","dm","m","km","Yards","Zoll","Meilen","Seemeilen","Fuß",]
 
 $scope.volumen=[
-"ml","dl","L","mm³","cm³","dm³","m³","Gallonen","Zoll³","Fuß³","Yard³",]
+"ml","dl","l","mm³","cm³","dm³","m³","Gallonen(US)","Zoll³","Fuß³","Yard³",]
 $scope.volumen2=[
 "mm","cm","dm","m","Zoll","Fuß","Yard",]
 $scope.masse=[
@@ -34,10 +34,10 @@ $scope.kraft=[
 "N","kN", "kgf", "lbf"]
 
 $scope.arbeit=[
-"J","kJ","cal","kcal","kwh",]
+"J","kJ","cal","kcal","Wh","kWh",]
 
 $scope.leistung=[
-"W","kW","mW","kcal/s","kcal/h","ps","hpower",]
+"W","kW","mW","kcal/s","kcal/h","ps","hp",]
 
 $scope.kochen=[
 "ml","teaspoon","cup(US)","cup(GB)","cup(metrisch)","Gramm","Unzen(US)","Unzen(GB)",]

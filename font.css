@@ -74,9 +74,9 @@ div.input {}
 #header {
     display: table;
     margin: auto;
-    margin-top: 15px;
+    margin-top: -15px;
     z-index: 5;
-    position: relative;
+    position: sticky;
 }
 .container {
 	z-index: -1;
@@ -108,16 +108,40 @@ div.input {}
 .panel-title a {
     cursor: pointer;
 }
+#help {
+margin-top: 0;
+text-align  : right;
+position: static;
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-#select_flaeche, #select_volumen, #select_laenge, #select_masse, #select_zeit, #select_winkel, #select_temperatur, #select_geschwindigkeit, #select_druck, #select_kraft, #select_arbeit, #select_leistung, #select_waehrung, #select_kochen, #select_daten {
+.btn:hover {
+  background-color: green;
+}
+.far {
+    color:white;
+}
+
+
+#select_flaeche, #select_volumen,#select_volumen2, #select_laenge,#select_laenge2, #select_masse, #select_zeit, #select_winkel, #select_temperatur, #select_geschwindigkeit, #select_druck, #select_kraft, #select_arbeit, #select_leistung, #select_waehrung, #select_kochen, #select_daten {
 	width: 20%;
 	text-align: left;
-	margin-left: 5px;
+	margin-left: 0px;
+    size: 5;
 }
 #input3, #input5, #input6 {
-	margin-left: 5px;
+	margin-left: 2px;
 }
-
+#input2,#input3,#input4, #input5, #input6 {
+    width: 10%;
+}
 .card-body {
 	opacity: 1;
 }
