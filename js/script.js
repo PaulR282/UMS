@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 
 var open = [];
 var pi = Math.PI;
@@ -594,6 +594,7 @@ function kochen2() {
 }
 // done ^
 
+   
 
 function waehrung2() {
     m50 = m50 + 1;
@@ -602,10 +603,11 @@ function waehrung2() {
         /*var euriusd = document.getElementsByClassName('hiddenOne')[0].id;
         alert(euriusd)
         var test = euriusd[0].value;
-        console.log(test, euriusd)*/
-        const test = document.querySelectorAll('.left');
-        test2 =test.getAttribute('main-value');
-        alert(test2);
+        console.log(test, euriusd)
+        var test = &('.left:first');
+        test2 =test.attr('main-value');
+        console.log(test2);*/
+        console.info("left:first: " $(main-value).attr('left:first'));
         var m1 = document.getElementById('input17').value;
         var m6 = m1.replace(/,/, ".");
         if (isNaN(m6)) {
@@ -629,3 +631,4 @@ function waehrung2() {
 function test() {
 
 }
+});
