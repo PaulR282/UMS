@@ -1,3 +1,5 @@
+
+
 var open = [];
 var pi = Math.PI;
 var a50 = 0;
@@ -328,7 +330,7 @@ function volumen2(statev) {
             var c23 = document.getElementById('ml').value = c11;
             var c24 = document.getElementById('dl').value = c11 / 100;
             var c25 = document.getElementById('l').value = c11 / 1000;
-            var c26 = document.getElementById('mm³').value = c11 *1000;
+            var c26 = document.getElementById('mm³').value = c11 * 1000;
             var c27 = document.getElementById('cm³').value = c11;
             var c28 = document.getElementById('dm³').value = c11 / 1000;
             var c33 = document.getElementById('m³').value = c11 / 1000000;
@@ -337,9 +339,8 @@ function volumen2(statev) {
             var c31 = document.getElementById('Fuß³').value = c11 / 28316.846592;
             var c32 = document.getElementById('Yard³').value = c11 / 764554.9;
         }
-    }
-    else if (statev == 2) {
-    	q50 = q50 + 1;
+    } else if (statev == 2) {
+        q50 = q50 + 1;
         if (q50 > 1) {
             var q1 = document.getElementById('input20').value;
             var q6 = q1.replace(/,/, ".");
@@ -348,34 +349,34 @@ function volumen2(statev) {
                 alert(q6 + ' ist keine Zahl!');
             }
             var oper = document.getElementById('select_volumen2').value;
-            if (oper==="ml")
-            	var q11 = q6;
-            if (oper==="dl")
-            	var q11 = q6*100;
-            if (oper==="l")
-            	var q11 = q6 *1000;
-            if (oper==="mm³")
-            	var q11 = q6 / 1000;
-            if (oper==="cm³")
-            	var q11 = q6;
-            if (oper==="dm³")
-            	var q11 = q6 *1000;
-            if (oper==="m³")
-            	var q11 = q6 *1000000;
-            if (oper==="Gallonen(US)")
-            	var q11 = q6 *3785;
-            if (oper==="Zoll³")
-            	var q11 = q6 *16.387076;
-            if (oper==="Fuß³")
-            	var q11 = q6 *28316.846592;
-            if (oper==="Yard³")
-            	var q11 = q6 *764554.9;
+            if (oper === "ml")
+                var q11 = q6;
+            if (oper === "dl")
+                var q11 = q6 * 100;
+            if (oper === "l")
+                var q11 = q6 * 1000;
+            if (oper === "mm³")
+                var q11 = q6 / 1000;
+            if (oper === "cm³")
+                var q11 = q6;
+            if (oper === "dm³")
+                var q11 = q6 * 1000;
+            if (oper === "m³")
+                var q11 = q6 * 1000000;
+            if (oper === "Gallonen(US)")
+                var q11 = q6 * 3785;
+            if (oper === "Zoll³")
+                var q11 = q6 * 16.387076;
+            if (oper === "Fuß³")
+                var q11 = q6 * 28316.846592;
+            if (oper === "Yard³")
+                var q11 = q6 * 764554.9;
 
-            
+
             var q23 = document.getElementById('ml').value = q11;
             var q24 = document.getElementById('dl').value = q11 / 100;
             var q25 = document.getElementById('l').value = q11 / 1000;
-            var q26 = document.getElementById('mm³').value = q11*1000;
+            var q26 = document.getElementById('mm³').value = q11 * 1000;
             var q27 = document.getElementById('cm³').value = q11;
             var q28 = document.getElementById('dm³').value = q11 / 1000;
             var q33 = document.getElementById('m³').value = q11 / 1000000;
@@ -383,7 +384,8 @@ function volumen2(statev) {
             var q30 = document.getElementById('Zoll³').value = q11 / 16.387076;
             var q31 = document.getElementById('Fuß³').value = q11 / 28316.846592;
             var q32 = document.getElementById('Yard³').value = q11 / 764554.9;
-        }}
+        }
+    }
 
 }
 
@@ -432,8 +434,8 @@ function arbeit2() {
             var l11 = l6;
         if (oper === "kJ")
             var l11 = l6 * 1000;
-        if (oper === "cal") 
-            var l11 = l6 * 4.184; 
+        if (oper === "cal")
+            var l11 = l6 * 4.184;
         if (oper === "kcal")
             var l11 = l6 * 4184;
         if (oper === "Wh")
@@ -474,6 +476,7 @@ function kraft2() {
         var k23 = document.getElementById('lbf').value = k11 / 4.448;
     }
 }
+
 function temperatur2() {
     h50 = h50 + 1;
     if (h50 > 1) {
@@ -489,21 +492,120 @@ function temperatur2() {
         if (oper === "K")
             var h11 = h6 - 273.15;
         if (oper === "°F")
-            var h11 = (h6 -32) / 1.8;
+            var h11 = (h6 - 32) / 1.8;
         var h20 = document.getElementById('°C').value = h11;
-        var h21 = document.getElementById('K').value =  h11 -(-273.15);
+        var h21 = document.getElementById('K').value = h11 - (-273.15);
         var h22 = document.getElementById('°F').value = h11 * 1.8 + 32;
     }
 }
 
+function daten2() {
+    p50 = p50 + 1
+    if (p50 > 1) {
+        var p1 = document.getElementById('input19').value;
+        var p6 = p1.replace(/,/, ".");
+        if (isNaN(p6)) {
+
+            alert(p6 + 'ist keine Zahl!');
+        }
+        var oper = document.getElementById('select_daten').value;
+        if (oper === "b")
+            var p11 = p6;
+        if (oper === "kb")
+            var p11 = p6 * 1000;
+        if (oper === "mb")
+            var p11 = p6 * 1000000;
+        if (oper === "gb")
+            var p11 = p6 * 1000000000;
+        if (oper === "tb")
+            var p11 = p6 * 1000000000000;
+        var p20 = document.getElementById('b').value = p11;
+        var p21 = document.getElementById('kb').value = p11 / 1000;
+        var p22 = document.getElementById('mb').value = p11 / 1000000;
+        var p23 = document.getElementById('gb').value = p11 / 1000000000;
+        var p24 = document.getElementById('tb').value = p11 / 1000000000000;
+    }
+}
+
+function leistung2() {
+    n50 = n50 + 1;
+    if (n50 > 1) {
+        var n1 = document.getElementById('input16').value;
+        var n6 = n1.replace(/,/, ".");
+        if (isNaN(n6)) {
+
+            alert(n6 + 'Ist keine Zahl!');
+        }
+
+        var oper = document.getElementById('select_leistung').value;
+        if (oper === "W")
+            var n11 = n6;
+        if (oper === "kW")
+            var n11 = n6 * 1000;
+        if (oper === "mW")
+            var n11 = n6 * 1e+6;
+        if (oper === "kcal/s")
+            var n11 = n6 * 4184;
+        if (oper === "kcal/h")
+            var n11 = n6 * 1.16222;
+        if (oper === "PS")
+            var n11 = n6 * 735.499;
+        var n20 = document.getElementById('W').value = n11;
+        var n21 = document.getElementById('kW').value = n11 / 1000;
+        var n22 = document.getElementById('mW').value = n11 / 1e+6;
+        var n23 = document.getElementById('kcal/s').value = n11 / 4184;
+        var n24 = document.getElementById('kcal/h').value = n11 / 1.16222;
+        var n25 = document.getElementById('PS').value = n11 / 735.499;
+    }
+}
+
+function kochen2() {
+    o50 = o50 + 1
+    if (o50 > 1) {
+        var o1 = document.getElementById('input18').value;
+        var o6 = o1.replace(/,/, ".");
+        if (isNaN(o6)) {
+
+            alert(o6 + 'ist keine Zahl!');
+        }
+        var oper = document.getElementById('select_kochen').value;
+        if (oper === "ml(cc)")
+            var o11 = o6;
+        if (oper === "teaspoon(GB)")
+            var o11 = o6 * 5.919;
+        if (oper === "teaspoon(US)")
+            var o11 = o6 * 4.929;
+        if (oper === "cup(US)")
+            var o11 = o6 * 240;
+        if (oper === "cup(GB)")
+            var o11 = o6 * 284.131;
+        if (oper === "Unzen(US)")
+            var o11 = o6 * 29.574;
+        if (oper === "Unzen(GB)")
+            var o11 = o6 * 28.413;
+        var o20 = document.getElementById('ml(cc)').value = o11;
+        var o21 = document.getElementById('teaspoon(GB)').value = o11 / 5.919;
+        var o22 = document.getElementById('teaspoon(US)').value = o11 / 4.929;
+        var o23 = document.getElementById('cup(US)').value = o11 / 240;
+        var o24 = document.getElementById('cup(GB)').value = o11 / 284.131;
+        var o26 = document.getElementById('Unzen(US)').value = o11 / 29.574;
+        var o26 = document.getElementById('Unzen(GB)').value = o11 / 28.413;
+    }
+}
 // done ^
 
 
 function waehrung2() {
     m50 = m50 + 1;
     if (m50 > 1) {
-        var euriusd = 1.124;
-        var usdieur = 0.89;
+        //var euriusd = 1.124;
+        /*var euriusd = document.getElementsByClassName('hiddenOne')[0].id;
+        alert(euriusd)
+        var test = euriusd[0].value;
+        console.log(test, euriusd)*/
+        const test = document.querySelectorAll('.left');
+        //test2 =test.getAttribute('main-value');
+        alert(test);
         var m1 = document.getElementById('input17').value;
         var m6 = m1.replace(/,/, ".");
         if (isNaN(m6)) {
@@ -512,12 +614,12 @@ function waehrung2() {
         }
         var oper = document.getElementById('select_waehrung').value;
         if (oper === "€") {
-            var m72 = m6 * 1.124;
+            var m72 = m6 * euriusd;
             var m62 = m6;
         }
         if (oper === "$") {
-        	var m72 = m6;
-            var m62 = m72*0.89;
+            var m72 = m6;
+            var m62 = m72 * (1 / euriusd);
         }
         var m20 = document.getElementById('€').value = m62;
         var m21 = document.getElementById('$').value = m72;
@@ -525,5 +627,5 @@ function waehrung2() {
 }
 //naja
 function test() {
- 
-} 
+
+}

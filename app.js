@@ -37,13 +37,13 @@ $scope.arbeit=[
 "J","kJ","cal","kcal","Wh","kWh",]
 
 $scope.leistung=[
-"W","kW","mW","kcal/s","kcal/h","ps","hp",]
+"W","kW","mW","kcal/s","kcal/h","PS"]
 
 $scope.kochen=[
-"ml","teaspoon","cup(US)","cup(GB)","cup(metrisch)","Gramm","Unzen(US)","Unzen(GB)",]
+"ml(cc)","teaspoon(GB)","teaspoon(US)","cup(US)","cup(GB)","Unzen(US)","Unzen(GB)",]
 
 $scope.daten=[
-"bite","kb","mb","gb","tb"]
+"b","kb","mb","gb","tb"]
 $scope.waehrung=[
 "€", "$"]
 });

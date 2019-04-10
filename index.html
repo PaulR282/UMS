@@ -17,16 +17,32 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min."></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-     <div id="help">
-                        <button class="btn" style="color: white" onclick="test()">Klick mich&nbsp;<i class="fas fa-arrow-right"></i> <i class="far fa-question-circle"></i></button>
+    <div id="help">
+        <button class="btn" style="color: white" onclick="test()" data-toggle="modal" data-target="#helpmodal">Klick mich&nbsp;<i class="fas fa-arrow-right"></i> <i class="far fa-question-circle"></i></button>
+        <div class="modal fade" id="helpmodal" tabindex="-1" role="dialog" aria-labelledby="helpmodallabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="helpmodallabel">Hilfe</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
+                    <div class="modal-body">
+                        Work in Progress
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="all">
-
         <div id="header">
-
             <ul>
                 <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
                 <li><a>Mathe</a>
@@ -58,11 +74,12 @@
                     </ul>
                 </li>
             </ul>
-
-
         </div>
         <div class="container">
             <div id="laenge" style="display: none" class="card w-70 card-body bg-light">
+                <button type="button" class="close" onclick="display_toggle(laenge)" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <div class="show_header_text"> L&auml;nge umrechnen</div>
                 <div>
                     <div class="input-group mb-3">
@@ -81,6 +98,9 @@
                 </div>
             </div>
             <div id="flaeche" style="display: none" class="card w-70 card-body bg-light">
+                <button type="button" class="close" onclick="display_toggle(flaeche)" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <div class="show_header_text"> Fl&auml;che umrechnen</div>
                 <div>
                     <div class="input-group mb-3">
@@ -111,6 +131,9 @@
             </div>
         </div>
         <div id="volumen" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(volumen)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Volumen umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -141,6 +164,9 @@
             </div>
         </div>
         <div id="masse" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(masse)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Masse umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -159,6 +185,9 @@
             </div>
         </div>
         <div id="zeit" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(zeit)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Zeit umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -177,6 +206,9 @@
             </div>
         </div>
         <div id="winkel" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(winkel)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Winkel umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -195,6 +227,9 @@
             </div>
         </div>
         <div id="temperatur" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(temperatur)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Temperatur umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -213,6 +248,9 @@
             </div>
         </div>
         <div id="geschwindigkeit" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(geschwindigkeit)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Geschwindigkeit umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -231,6 +269,9 @@
             </div>
         </div>
         <div id="druck" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(druck)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Druck umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -249,6 +290,9 @@
             </div>
         </div>
         <div id="kraft" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(kraft)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Gewichtskraft umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -267,6 +311,9 @@
             </div>
         </div>
         <div id="arbeit" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(arbeit)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Arbeit umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -285,6 +332,9 @@
             </div>
         </div>
         <div id="leistung" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(leistung)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Leistung umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -303,6 +353,9 @@
             </div>
         </div>
         <div id="waehrung" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(waehrung)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">W&auml;hrung umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -318,9 +371,13 @@
                         <span class="input-group-text">{{x}}</span>
                     </div>
                 </div>
+                <iframe src="https://www.widgets.investing.com/live-currency-cross-rates?theme=lightTheme&cols=bid&pairs=1" width="100%" height="20%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
             </div>
         </div>
         <div id="kochen" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(kochen)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Kochen umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -339,6 +396,9 @@
             </div>
         </div>
         <div id="daten" style="display: none" class="card w-70 card-body bg-light">
+            <button type="button" class="close" onclick="display_toggle(daten)" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="show_header_text">Daten umrechnen</div>
             <div>
                 <div class="input-group mb-3">
@@ -357,7 +417,7 @@
             </div>
         </div>
     </div>
+    </div>
 </body>
-</div>
 
 </html>
